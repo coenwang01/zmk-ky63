@@ -21,27 +21,60 @@
 
 / {
     macros {
-        Ky_MyPwd: Ky_MyPwd {
-            label = "Ky_MyPwd";
+        Login_Pwd: LoginPwd {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5>;
+            bindings = <&none &kp N1 &kp N2 &kp N3 &kp N6 &kp N5 &kp N4 &kp RET>;
+            label = "LOGINPWD";
         };
 
-        end_enter: end_enter {
+        Gmail: Gmail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp ENTER>;
-            label = "END_ENTER";
+            bindings = <&none &kp C &kp O &kp E &kp N &kp DOT &kp K &kp DOT &kp W &kp A &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "GMAIL";
         };
 
-        end_semi_enter: end_semi_enter {
+        Pwd_B: Pwd_B {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp SEMI &kp ENTER>;
-            label = "END_SEMI_ENTER";
+            bindings = <&none &kp LS(B) &kp A &kp LS(Z) &kp H &kp E &kp N &kp G &kp LS(D) &kp A &kp O &kp AMPS &kp N1 &kp N2>;
+            label = "PWD_B";
+        };
+
+        Clear_Cache: Clear_Cache {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(LC(DELETE))>;
+            label = "CLEAR_CACHE";
+        };
+
+        Task_Manager: Task_Manager {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LC(LA(DELETE))>;
+            label = "TASK_MANAGER";
+        };
+
+        Qmail: Qmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N1 &kp N1 &kp N5 &kp N0 &kp N9 &kp N0 &kp N4 &kp N7 &kp N8 &kp N4 &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>;
+            label = "QMAIL";
+        };
+
+        Pwd_H: Pwd_H {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(H) &kp E &kp R &kp O &kp N1 &kp N2 &kp N3 &kp N4>;
+            label = "PWD_H";
+        };
+
+        Phone_Num: Phone_Num {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N1 &kp N8 &kp N9 &kp N1 &kp N2 &kp N3 &kp N7 &kp N6 &kp N3 &kp N1 &kp N9>;
+            label = "PHONE_NUM";
         };
     };
 
@@ -182,10 +215,10 @@
             //  |LCTRL |LGUI|LALT|&ltq 4 DEL|&ltq 1 SPACE|    |    |&ltq 1 SPACE|&ltq 5 INS|RGUI|RALT|RCTRL |     |    |
 
             bindings = <
-&kp GRAVE   &kp F1    &kp F2    &kp F4  &kp F7     &kp F8  &kp F10    &kp F11  &kp F12    &kp PRINTSCREEN  &kp DELETE  &kp MINUS   &kp EQUAL  &kp BSPC
-&kp TAB     &kp Q     &kp W     &kp E   &kp R      &kp T   &kp Y      &kp U    &kp I      &kp O            &kp P       &kp LBKT    &kp RBKT   &kp BSLH
-&kp LCTRL   &kp A     &kp S     &kp D   &kp F      &kp G   &kp H      &kp J    &kp K      &kp L            &kp SEMI    &kp SQT     &kp ENTER
-&kp LSHIFT  &kp Z     &kp X     &kp C   &ltq 3 V   &kp B   &kp N      &kp M    &kp COMMA  &kp DOT          &kp SLASH   &kp RSHIFT
+&kp GRAVE   &kp F1    &kp F2    &kp F4  &kp F7     &kp F8  &kp F10    &kp F11  &kp F12    &kp PRINTSCREEN  &kp DELETE  &kp MINUS  &kp EQUAL  &kp BSPC
+&kp TAB     &kp Q     &kp W     &kp E   &kp R      &kp T   &kp Y      &kp U    &kp I      &kp O            &kp P       &kp LBKT   &kp RBKT   &kp BSLH
+&kp LCTRL   &kp A     &kp S     &kp D   &kp F      &kp G   &kp H      &kp J    &kp K      &kp L            &kp SEMI    &kp SQT    &kp ENTER
+&kp LSHIFT  &kp Z     &kp X     &kp C   &ltq 3 V   &kp B   &kp N      &kp M    &kp COMMA  &kp DOT          &kp SLASH   &kp ENTER
 &kp ESCAPE  &kp LGUI  &kp LALT  &mo 1   &kp SPACE          &kp SPACE  &mo 2    &mo 3      &mo 4            &mo 5
             >;
 
@@ -201,11 +234,11 @@
             //  |    |     |LC(LS(HOME))|LC(LS(END))|     |     |                        |ENTER|    |    |    |    |    |    |
 
             bindings = <
-&none   &trans        &trans        &trans        &trans         &trans        &trans         &trans        &trans        &trans        &trans        &trans                &none                  &trans
-&none   &none         &none         &none         &none          &none         &none          &none         &none         &none         &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans                &trans
-&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH      &none         &none          &none         &none         &none         &trans        &trans
-&trans  &trans        &none         &none         &kp BACKSPACE                &kp BACKSPACE  &trans        &trans        &trans        &trans
+&none   &Login_Pwd    &Gmail        &Pwd_B        &Clear_Cache   &Task_Manager  &Qmail         &Pwd_H        &Phone_Num    &trans        &trans        &trans                &none                  &trans
+&none   &none         &none         &none         &none          &none          &none          &none         &none         &none         &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans                &trans
+&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH      &none          &none          &none         &none         &none         &trans        &trans
+&trans  &trans        &none         &none         &kp BACKSPACE                 &kp BACKSPACE  &trans        &trans        &trans        &trans
             >;
 
             label = "Number";
