@@ -73,8 +73,8 @@ layers:
   - '&Qmail'
   - '&Pwd_H'
   - '&Phone_Num'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&Q_Src'
+  - '&Per_Del'
   - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
