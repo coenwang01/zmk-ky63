@@ -76,6 +76,20 @@
             bindings = <&none &kp N1 &kp N8 &kp N9 &kp N1 &kp N2 &kp N3 &kp N7 &kp N6 &kp N3 &kp N1 &kp N9>;
             label = "PHONE_NUM";
         };
+
+        Q_Src: Q_Src {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LC(LA(A))>;
+            label = "Q_SRC";
+        };
+
+        Per_Del: Per_Del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(DELETE)>;
+            label = "PER_DEL";
+        };
     };
 
     behaviors {
@@ -234,7 +248,7 @@
             //  |    |     |LC(LS(HOME))|LC(LS(END))|     |     |                        |ENTER|    |    |    |    |    |    |
 
             bindings = <
-&none   &Login_Pwd    &Gmail        &Pwd_B        &Clear_Cache   &Task_Manager  &Qmail         &Pwd_H        &Phone_Num    &trans        &trans        &trans                &none                  &trans
+&none   &Login_Pwd    &Gmail        &Pwd_B        &Clear_Cache   &Task_Manager  &Qmail         &Pwd_H        &Phone_Num    &Q_Src        &Per_Del      &trans                &none                  &trans
 &none   &none         &none         &none         &none          &none          &none          &none         &none         &none         &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans                &trans
 &trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH      &none          &none          &none         &none         &none         &trans        &trans
