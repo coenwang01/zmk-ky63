@@ -106,15 +106,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - +
-  - '-'
-  - '*'
-  - /
+  - UP ARROW
+  - DOWN
+  - PAGE UP
+  - PAGE DOWN
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -170,10 +170,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
+  - +
+  - '-'
+  - '*'
+  - /
   - ''
   - ''
   - ''
@@ -239,8 +239,8 @@ layers:
   - PAGE UP
   - {t: PAGE DOWN, type: held}
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
