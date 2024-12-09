@@ -1,5 +1,5 @@
 layers:
-  qwerty:
+  Qwerty:
   - '`'
   - F1
   - F2
@@ -45,7 +45,7 @@ layers:
   - Z
   - X
   - C
-  - {t: V, h: direct}
+  - {t: V, h: Symbol}
   - B
   - N
   - M
@@ -56,14 +56,14 @@ layers:
   - ESCAPE
   - LGUI
   - LALT
-  - num_macro
+  - Number
   - SPACE
   - SPACE
-  - symbol
-  - direct
-  - media
-  - ble
-  num_macro:
+  - Function
+  - Symbol
+  - Control
+  - Mouse
+  Number:
   - ''
   - '&Login_Pwd'
   - '&Gmail'
@@ -127,7 +127,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  symbol:
+  Function:
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -191,7 +191,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  direct:
+  Symbol:
   - ''
   - ''
   - ''
@@ -255,15 +255,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  media:
+  Control:
   - ''
   - MUTE
   - VOL DN
   - VOL UP
   - BRI DEC
   - BRI INC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - LEFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -319,7 +319,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  ble:
+  Mouse:
   - BT CLR
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
