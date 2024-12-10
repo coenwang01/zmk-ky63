@@ -1,68 +1,6 @@
 layers:
-  Qwerty:
-  - '`'
-  - F1
-  - F2
-  - F4
-  - F7
-  - F8
-  - F10
-  - F11
-  - F12
-  - PRINTSCREEN
-  - DELETE
-  - '-'
-  - '='
-  - BSPC
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - '['
-  - ']'
-  - \
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - ''''
-  - ENTER
-  - LSHIFT
-  - Z
-  - X
-  - C
-  - {t: V, h: Symbol}
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - ENTER
-  - ESCAPE
-  - LGUI
-  - LALT
-  - Number
-  - SPACE
-  - SPACE
-  - Function
-  - Symbol
-  - Control
-  - Mouse
+  Qwerty: ['`', F1, F2, F4, F7, F8, F10, F11, F12, PRINTSCREEN, DELETE, '-', '=', BSPC, TAB, Q, W, E, R, T, Y, U, I, O, P, '[', ']', \, LCTRL, A, S, D, F, G, H, J,
+    K, L, ;, '''', ENTER, LSHIFT, Z, X, C, V, B, N, M, ',', ., /, ENTER, ESCAPE, LGUI, LALT, Number, SPACE, SPACE, Function, Symbol, Control, Mouse]
   Number:
   - ''
   - '&Login_Pwd'
@@ -237,7 +175,7 @@ layers:
   - HOME
   - END
   - PAGE UP
-  - {t: PAGE DOWN, type: held}
+  - PAGE DOWN
   - ''
   - ''
   - ''
@@ -252,7 +190,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Control:
